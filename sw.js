@@ -7,7 +7,7 @@ const DYNAMIC_CACHE_NAME = 'tw-dynamic-cache-v1.0';
 const DYNAMIC_CACHE_LIMIT = 50;
 
 const STATIC_APP_SHELL = [
-    '/',
+    //'/',
     'index.html',
     'css/style.css',
     'img/favicon.ico',
