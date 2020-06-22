@@ -1,6 +1,6 @@
 importScripts('js/sw-utils.js');
 
-const STATIC_CACHE_NAME = 'tw-static-cache-v1.0';
+const STATIC_CACHE_NAME = 'tw-static-cache-v1.1';
 const INMUTABLE_CACHE_NAME = 'tw-inmutable-cache-v1.0';
 const DYNAMIC_CACHE_NAME = 'tw-dynamic-cache-v1.0';
 
