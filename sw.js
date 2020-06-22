@@ -1,8 +1,8 @@
 importScripts('js/sw-utils.js');
 
-const STATIC_CACHE_NAME = 'tw-static-cache-v1.1';
+const STATIC_CACHE_NAME = 'tw-static-cache-v1.2';
 const INMUTABLE_CACHE_NAME = 'tw-inmutable-cache-v1.0';
-const DYNAMIC_CACHE_NAME = 'tw-dynamic-cache-v1.0';
+const DYNAMIC_CACHE_NAME = 'tw-dynamic-cache-v1.1';
 
 const DYNAMIC_CACHE_LIMIT = 50;
 
@@ -43,6 +43,9 @@ self.addEventListener('activate', event => {
         .then(keys => {
             keys.forEach(async key => {
                 if (key !== STATIC_CACHE_NAME && key.includes('static-cache')) {
+                    await caches.delete(key);
+                }
+                if (key !== DYNAMIC_CACHE_NAME && key.includes('dynamic-cache')) {
                     await caches.delete(key);
                 }
             });
